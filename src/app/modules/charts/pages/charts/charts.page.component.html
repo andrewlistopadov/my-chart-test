@@ -10,7 +10,7 @@
   </nav>
 
   <div *ngIf="isActiveChart(charts.PIE)" class="charts__wrapper pie-chart-wrapper">
-    <h3> {{title}} </h3>
+    <h3> {{pieChartHeading}} </h3>
     <pie-chart [data]="sunnyDays"></pie-chart>
     <nav class="pie-chart-wrapper__nav nav-pills cities-pills">
       <a href="#" class="nav-pills__lnk" [class.active]="isCityActive(cities.SAINT_PETERSBURG)" (click)="showCity(cities.SAINT_PETERSBURG)">
