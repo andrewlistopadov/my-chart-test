@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "deploy": "ng build --prod --base-href \"https://andrewlistopadov.github.io/my-chart-test/\" && angular-cli-ghpages --repo=https://GH_TOKEN@github.com/andrewlistopadov/my-chart-test.git",
+    "build": "ng build --prod --base-href \"https://andrewlistopadov.github.io/my-chart-test/\"",
+    "deploy": "npx ngh --repo=https://GH_TOKEN@github.com/andrewlistopadov/my-chart-test.git --dir=dist/my-chart-test",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
