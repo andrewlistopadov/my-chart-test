@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "ng build --prod --base-href \"https://andrewlistopadov.github.io/my-chart-test/\" && angular-cli-ghpages --repo=https://GH_TOKEN@github.com/andrewlistopadov/my-chart-test.git",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
