@@ -1,0 +1,14 @@
+<div class="pie-chart-wrapper">
+  <ngx-charts-pie-chart 
+    class="expand-legend"
+    [results]="data" 
+    [view]="view" 
+    [scheme]="colorScheme" 
+    [legend]="legend" 
+    [explodeSlices]="explodeSlices"
+    [labels]="labels"
+    [doughnut]="doughnut"
+    [gradient]="gradient"
+    (select)="onSelect($event)"
+  ></ngx-charts-pie-chart>
+</div>

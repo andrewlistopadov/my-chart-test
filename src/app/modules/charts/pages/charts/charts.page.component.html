@@ -1,4 +1,15 @@
-<p>
-  charts works!
-  <chart></chart>
-</p>
+<section>
+  <header>
+    <h2>
+      {{title}}
+    </h2>
+  </header>
+  <div class="chart-wrapper">
+    <pie-chart [data]="sunnyDays"></pie-chart>
+  </div>
+  <div class="toolbar">
+    <button type="button" class="toggle" (click)="toggleCities()">
+      Toggle cities
+    </button>
+  </div>
+</section>

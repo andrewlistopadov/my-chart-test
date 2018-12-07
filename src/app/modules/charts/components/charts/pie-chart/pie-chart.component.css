@@ -1,0 +1,8 @@
+/deep/ .pie-chart-wrapper .pie-label, 
+/deep/ .pie-chart-wrapper .chart-legend .legend-label-text {
+  font-size: 14px;
+}
+
+/deep/ .pie-chart-wrapper .expand-legend .chart-legend .legend-labels {
+  width: auto;
+}
