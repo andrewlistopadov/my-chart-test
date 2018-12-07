@@ -1,15 +1,33 @@
-<section>
-  <header>
-    <h2>
-      {{title}}
-    </h2>
-  </header>
-  <div class="chart-wrapper">
+<section class="charts">
+
+  <nav class="charts__nav nav-pills charts-pills">
+    <a href="#" class="nav-pills__lnk" [class.active]="isActiveChart(charts.PIE)" (click)="goToChart(charts.PIE)">
+      Pie chart
+    </a>
+    <a href="#" class="nav-pills__lnk" [class.active]="isActiveChart(charts.LINEAR)" (click)="goToChart(charts.LINEAR)">
+      Linear chart
+    </a>
+  </nav>
+
+  <div *ngIf="isActiveChart(charts.PIE)" class="charts__wrapper pie-chart-wrapper">
+    <h3> {{title}} </h3>
     <pie-chart [data]="sunnyDays"></pie-chart>
+    <nav class="pie-chart-wrapper__nav nav-pills cities-pills">
+      <a href="#" class="nav-pills__lnk" [class.active]="isCityActive(cities.SAINT_PETERSBURG)" (click)="showCity(cities.SAINT_PETERSBURG)">
+        Saint-Petersburg
+      </a>
+      <a href="#" class="nav-pills__lnk" [class.active]="isCityActive(cities.MOSCOW)" (click)="showCity(cities.MOSCOW)">
+        Moscow
+      </a>
+      <a href="#" class="nav-pills__lnk" [class.active]="isCityActive(cities.SOCHI)" (click)="showCity(cities.SOCHI)">
+        Sochi
+      </a>
+    </nav>
   </div>
-  <div class="toolbar">
-    <button type="button" class="toggle" (click)="toggleCities()">
-      Toggle cities
-    </button>
+
+  <div *ngIf="isActiveChart(charts.LINEAR)" class="charts__wrapper linear-chart-wrapper">
+    <br><br><br>
+    Will be implemented soon.
   </div>
+
 </section>

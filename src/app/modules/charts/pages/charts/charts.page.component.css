@@ -1,4 +1,34 @@
-.chart-wrapper {
+.charts__wrapper {
   display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
+}
+
+.nav-pills__lnk {
+  background-color: #808080;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav-pills__lnk:hover, .nav-pills__lnk:active, .nav-pills__lnk.active {
+  background-color: #0460a9;
+}
+
+.nav-pills__lnk.active:hover, .nav-pills__lnk.active:active {
+  background-color: #0000A0;
+}
+
+.nav-pills__lnk+.nav-pills__lnk {
+  margin-left: 5px;
+}
+
+.charts-pills {
+  font-size: 20px;
+}
+
+.cities-pills {
+  font-size: 14px;
 }

@@ -118,6 +118,61 @@ export class ChartsService {
     );
   }
 
+  public get sunnyDaysForSochi(): Promise<ChartSingleData[]> {
+    return Promise.resolve(
+      [
+        {
+          name: 'January',
+          value: 5
+        },
+        {
+          name: 'February',
+          value: 4
+        },
+        {
+          name: 'March',
+          value: 8
+        },
+        {
+          name: 'April',
+          value: 11
+        },
+        {
+          name: 'May',
+          value: 7
+        },
+        {
+          name: 'June',
+          value: 11
+        },
+        {
+          name: 'July',
+          value: 11
+        },
+        {
+          name: 'August',
+          value: 15
+        },
+        {
+          name: 'September',
+          value: 16
+        },
+        {
+          name: 'October',
+          value: 11
+        },
+        {
+          name: 'November',
+          value: 11
+        },
+        {
+          name: 'December',
+          value: 5
+        },
+      ]
+    );
+  }
+
 
 
 }
