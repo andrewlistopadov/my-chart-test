@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartsService } from '../../services/charts.service';
 import { ChartSingleData } from '../../components/charts/chart.types';
-import introJs from 'intro.js/intro.js';
 
 enum Cities {
   SAINT_PETERSBURG = 'Saint-Petersburg',
@@ -19,7 +18,7 @@ enum Charts {
   styleUrls: ['./charts.page.component.css']
 })
 export class ChartsPageComponent implements OnInit {
-  private intro: introJs;
+  private intro: any;
   private activeChart: Charts;
   public charts = Charts;
 
@@ -29,44 +28,47 @@ export class ChartsPageComponent implements OnInit {
 
 
   constructor(private chartsService: ChartsService) {
-    this.intro = introJs();
   }
 
 
   ngOnInit() {
     this.goToChart(Charts.PIE);
     this.showCity(Cities.SAINT_PETERSBURG);
-
-
-    // Initialize steps
-    this.intro.setOptions({
-      steps: [
-        {
-          element: '.charts-pills',
-          intro: 'The pills panel allows to switch between pie and linear chart',
-          position: 'bottom'
-        },
-        {
-          element: '.pie-chart-wrapper .ngx-charts',
-          intro: 'This is <i>currently selected</i> chart',
-          position: 'bottom'
-        },
-        {
-          element: '.pie-chart-wrapper .chart-legend',
-          intro: 'This is its legend',
-          position: 'bottom'
-        },
-        {
-          element: '.pie-chart-wrapper__nav',
-          intro: 'Pie chart has <span style="color: green;">3</span>sources to show',
-          position: 'left'
-        }
-      ]
-    });
   }
 
   public startTour() {
-    this.intro.start();
+    return import(/* webpackChunkName: 'intro.js' */ 'intro.js/intro.js')
+      .then(({ default: introJs }) => {
+        this.intro = introJs();
+
+        // Initialize steps
+        this.intro.setOptions({
+          steps: [
+            {
+              element: '.charts-pills',
+              intro: 'The pills panel allows to switch between pie and linear chart',
+              position: 'bottom'
+            },
+            {
+              element: '.pie-chart-wrapper .ngx-charts',
+              intro: 'This is <i>currently selected</i> chart',
+              position: 'bottom'
+            },
+            {
+              element: '.pie-chart-wrapper .chart-legend',
+              intro: 'This is its legend',
+              position: 'bottom'
+            },
+            {
+              element: '.pie-chart-wrapper__nav',
+              intro: 'Pie chart has <span style="color: green;">3</span>sources to show',
+              position: 'left'
+            }
+          ]
+        });
+
+        this.intro.start();
+      });
   }
 
   public isActiveChart(chart: Charts): boolean {
