@@ -1,5 +1,11 @@
 <section class="charts">
 
+  <div class="tour-container">
+    <button class="tour-container__start-tour" (click)="startTour()" [disabled]="isActiveChart(charts.LINEAR)">
+      Start the app tour
+    </button>
+  </div>
+
   <nav class="charts__nav nav-pills charts-pills">
     <a href="#" class="nav-pills__lnk" [class.active]="isActiveChart(charts.PIE)" (click)="goToChart(charts.PIE)">
       Pie chart
@@ -9,7 +15,7 @@
     </a>
   </nav>
 
-  <div *ngIf="isActiveChart(charts.PIE)" class="charts__wrapper pie-chart-wrapper">
+  <div *ngIf="isActiveChart(charts.PIE)" class="charts__chart-container pie-chart-wrapper">
     <h3> {{pieChartHeading}} </h3>
     <pie-chart [data]="sunnyDays"></pie-chart>
     <nav class="pie-chart-wrapper__nav nav-pills cities-pills">
@@ -25,7 +31,7 @@
     </nav>
   </div>
 
-  <div *ngIf="isActiveChart(charts.LINEAR)" class="charts__wrapper linear-chart-wrapper">
+  <div *ngIf="isActiveChart(charts.LINEAR)" class="charts__chart-container linear-chart-wrapper">
     <br><br><br>
     Will be implemented soon.
   </div>

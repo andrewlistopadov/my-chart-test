@@ -1,3 +1,26 @@
+.tour-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tour-container__start-tour {
+  background-color: #302d61;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.tour-container__start-tour:hover {
+  background-color: #484290;
+}
+
 .charts__wrapper {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { ChartConfigService } from '../chart-config.service';
 import { ColorScheme, ColorThemes, ChartSingleData } from '../chart.types';
 

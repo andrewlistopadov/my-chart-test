@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build --prod --base-href \"https://andrewlistopadov.github.io/my-chart-test/\"",
     "deploy": "npx ngh --repo=https://GH_TOKEN@github.com/andrewlistopadov/my-chart-test.git --dir=dist/my-chart-test",
+    "build-and-deploy": "npm run build && npm run deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,7 +23,9 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "@swimlane/ngx-charts": "^10.0.0",
+    "@types/intro.js": "^2.4.4",
     "core-js": "^2.6.0",
+    "intro.js": "^2.9.3",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
