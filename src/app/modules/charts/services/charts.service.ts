@@ -8,7 +8,7 @@ export class ChartsService {
 
   constructor() { }
 
-  public get sunnyDaysForSPb(): Promise<ChartSingleData[]> {
+  public getSunnyDaysForSPb(): Promise<ChartSingleData[]> {
     return Promise.resolve(
       [
         {
@@ -63,7 +63,7 @@ export class ChartsService {
     );
   }
 
-  public get sunnyDaysForMoscow(): Promise<ChartSingleData[]> {
+  public getSunnyDaysForMoscow(): Promise<ChartSingleData[]> {
     return Promise.resolve(
       [
         {
@@ -118,7 +118,7 @@ export class ChartsService {
     );
   }
 
-  public get sunnyDaysForSochi(): Promise<ChartSingleData[]> {
+  public getSunnyDaysForSochi(): Promise<ChartSingleData[]> {
     return Promise.resolve(
       [
         {

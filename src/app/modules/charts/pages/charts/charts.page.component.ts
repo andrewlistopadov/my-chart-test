@@ -92,17 +92,17 @@ export class ChartsPageComponent implements OnInit {
 
     switch (city) {
       case Cities.SAINT_PETERSBURG: {
-        this.chartsService.sunnyDaysForSPb
+        this.chartsService.getSunnyDaysForSPb()
           .then(sunnyDays => this.sunnyDays = sunnyDays);
         break;
       }
       case Cities.MOSCOW: {
-        this.chartsService.sunnyDaysForMoscow
+        this.chartsService.getSunnyDaysForMoscow()
           .then(sunnyDays => this.sunnyDays = sunnyDays);
         break;
       }
       case Cities.SOCHI: {
-        this.chartsService.sunnyDaysForSochi
+        this.chartsService.getSunnyDaysForSochi()
           .then(sunnyDays => this.sunnyDays = sunnyDays);
         break;
       }
