@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ChartsPageComponent } from './pages/charts/charts.page.component';
 import { PieChartComponent } from './components/charts/pie-chart/pie-chart.component';
 import { Routes, RouterModule } from '@angular/router';
